@@ -180,7 +180,7 @@ body {
          overflow-y: auto;
          transform: translateX(-100%);
          visibility: hidden;
-         margin-top: 80px;
+         margin-top: 70px;
          transition: transform .4s ease-in-out;
          &.active_burger{
             transform: translateX(0);
@@ -188,7 +188,7 @@ body {
          }
          }
       @media (max-width: 767.98px){
-         margin-top: 50px;
+         margin-top: 40px;
          padding-left: 15px;
       }
    }
