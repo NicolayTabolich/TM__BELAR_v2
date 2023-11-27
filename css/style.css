@@ -252,13 +252,13 @@ body {
     top: 0;
     left: 0;
     text-align: center;
-    padding: 50px 10px 80px 10px;
+    padding: 60px 10px 80px 10px;
     overflow-y: auto;
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
     visibility: hidden;
-    margin-top: 80px;
+    margin-top: 70px;
     -webkit-transition: -webkit-transform 0.4s ease-in-out;
     transition: -webkit-transform 0.4s ease-in-out;
     transition: transform 0.4s ease-in-out;
@@ -273,8 +273,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .header__nav {
-    margin-top: 50px;
-    padding-left: 15px;
+    margin-top: 40px;
   }
 }
 .header__ul {

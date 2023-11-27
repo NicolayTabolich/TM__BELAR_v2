@@ -176,7 +176,7 @@ body {
          top:0;
          left:0;
          text-align: center;
-         padding: 50px 10px 80px 10px;
+         padding: 60px 10px 80px 10px;
          overflow-y: auto;
          transform: translateX(-100%);
          visibility: hidden;
@@ -189,7 +189,7 @@ body {
          }
       @media (max-width: 767.98px){
          margin-top: 40px;
-         padding-left: 15px;
+         // padding-left: 15px;
       }
    }
 
