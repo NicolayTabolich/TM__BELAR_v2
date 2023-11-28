@@ -56,18 +56,15 @@ body {
 }
 
 .header {
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   padding: 18px 0px;
-   z-index: 4;
+   padding: 15px 0px;
+   box-shadow: .3px .3px 10px rgba(0, 0, 0, .3);
+   // background: #fdf9f3;
    transition: background .3s ease;
    @media (max-width: 767.98px) {
       padding: 10px 0px;
    }
    &.active_burger{
-      background: #fff;
+      // background: #fff;
    }
 
    // .header__container
@@ -99,7 +96,7 @@ body {
       @media (max-width: 991.98px) {
          display: block;
          position: relative;
-         z-index: 4;
+         z-index: 6;
       }
    }
 
@@ -169,26 +166,29 @@ body {
    &__nav {
       @media (max-width: 991.98px) {
          position: absolute;
-         background-color:#fff;
+         background-color:#ffeac4;
          width: 100%;
-         height: 100vh;
-         z-index: 3;
+         height: 100%;
+         z-index: 5;
          top:0;
          left:0;
+         display: flex;
+         justify-content: center;
+         align-items:center;
          text-align: center;
-         padding: 80px 0px 80px 0px;
+         padding: 50px 0px 50px 0px;
          overflow-y: auto;
          transform: translateX(-100%);
          visibility: hidden;
-         margin-top: 70px;
-         transition: transform .4s ease-in-out;
+         // margin-top: 86px;
+         transition: all .4s ease-in-out;
          &.active_burger{
             transform: translateX(0);
             visibility:visible;
          }
          }
       @media (max-width: 767.98px){
-         margin-top: 40px;
+         // margin-top: 40px;
          // padding-left: 15px;
       }
    }
@@ -263,21 +263,8 @@ body {
 
    &__container {
       position: relative;
-      padding: 86px 15px 10px 15px;
+      padding: 50px 15px 10px 15px;
       min-height: calc(100vh - 96px);
-      &::after{
-         position: absolute;
-         background: var(--color_orng);
-         content: '';
-         top: 0;
-         left: 68%;
-         width: 100%;
-         height: 100%;
-         z-index: -20;
-      }
-      @media (max-width: 767.98px) {
-         min-height: 0;
-      }
    }
 
    // .home__scrin
@@ -291,7 +278,7 @@ body {
       @media (max-width: 767.98px){
          flex-wrap: wrap;
          justify-content: center;
-         align-items: flex-start;
+         // align-items: flex-start;
       }
    }
 
@@ -325,6 +312,7 @@ body {
       }
       @media (max-width: 767.98px){
          font-size: 30px;
+         text-align: center;
       }
    }
 
@@ -335,6 +323,7 @@ body {
       letter-spacing: 1.2px;
       @media (max-width: 767.98px) {
             font-size: 14px;
+            text-align: center;
       }
    }
 
@@ -358,7 +347,6 @@ body {
 }
 
 .form {
- 
    // .form__home
 
    &__home {}
@@ -369,10 +357,11 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 15px;
       @media (max-width: 991.98px){
          flex-direction: column;
          gap: 15px;
-         align-items: flex-start;
+         justify-content: center;
       }
 
    }
@@ -382,7 +371,7 @@ body {
    &__input {
       max-width:300px;
       font-size: 18px;
-      padding: 18px 54px 18px 72px;
+      padding: 13px 54px 13px 72px;
       border-radius: 29px;
       border: 1px solid rgba(0, 0, 0, 0.30);
       position: relative;
@@ -393,9 +382,9 @@ body {
             font-size: 16px;
       }
       @media (max-width: 991.98px){
-         // max-width: 200px;
+         // max-width: 250px;
          font-size: 14px;
-         padding: 10px 10px 10px 30px;
+         padding: 10px 10px 10px 40px;
          background: url(../icons/phone.svg) 5% 50% / 15px 15px no-repeat;
       }
    }
@@ -403,7 +392,6 @@ body {
    // .form__button
 
    &__button {
-      
       &.__btn {
             cursor: pointer;
             color: #FFF;
@@ -411,18 +399,17 @@ body {
             background: var(--color_orng);
             padding: 17px 35px;
             border-radius: 29px;
-            align-self: center;
+            align-items: center;
             @media (max-width: 1140px) {
                padding: 17px 25px;
             }
             @media (max-width: 991.98px){
                padding: 15px 20px;
-               align-self: flex-start;
             }
-      }
-
-      @media (max-width: 767.98px){
-         margin-bottom: 10px;
+            @media (max-width: 767.98px){
+               // padding: 8px 10px;
+               font-size: 14px;
+            }
       }
    }
 
