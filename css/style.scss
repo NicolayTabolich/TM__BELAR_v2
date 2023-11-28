@@ -616,7 +616,6 @@ body {
    &__product-img {
       padding-bottom: 60%;
       background: url(../img/product/bg.svg) center / contain no-repeat;
-      // border: 1px solid #000;
       & img {
          transition: transform 0.3s ease-in-out;
          transform: scale(0.8);
