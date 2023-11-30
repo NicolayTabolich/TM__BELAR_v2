@@ -1,4 +1,5 @@
 @import "_null";
+@import "_contact";
 
 :root {
    --color_orng: #FC9F33;
@@ -754,5 +755,10 @@ body {
 
    &__info-link {
       color:#000;
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
    }
 }
