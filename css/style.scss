@@ -87,8 +87,11 @@ body {
 .header {
    padding: 15px 0px;
    box-shadow: .3px .3px 10px rgba(0, 0, 0, .3);
-   // background: #fdf9f3;
+   background: #fdf9f3;
    transition: background .3s ease;
+   position: fixed;
+   z-index: 100;
+   width: 100%;
    @media (max-width: 767.98px) {
       padding: 10px 0px;
    }
@@ -289,13 +292,19 @@ body {
    // position: relative;
    // padding: 86px 0px 10px 0px;
    // .home__container
+   
 
    &__container {
       position: relative;
-      padding: 50px 15px 20px 15px;
-      min-height: calc(100vh - 145px);
+      padding: 200px 15px 150px 15px;
+      @media (max-width: 1140px) {
+         padding: 150px 15px 150px 15px;
+      }
+      @media (max-width: 991.98px) {
+         padding: 120px 15px 80px 15px;
+         }
       @media (max-width: 767.98px){
-         min-height: calc(100vh - 120px);
+         padding: 100px 15px 50px 15px;
       }
    }
 
@@ -310,6 +319,7 @@ body {
       @media (max-width: 767.98px){
          flex-wrap: wrap;
          justify-content: center;
+         row-gap: 40px;
          // align-items: flex-start;
       }
    }
@@ -432,7 +442,7 @@ body {
 
 .swiper {
    
-   width: 110%;
+   width: 105%;
    height: 100%;
    @media (max-width: 767.98px) {
       width: 80%;
@@ -711,6 +721,7 @@ body {
       }
       @media (max-width: 767.98px){
          font-size: 14px;
+         row-gap: 15px;
       }
    }
 
@@ -739,14 +750,16 @@ body {
 
    // .footer__logo-text
 
-   &__logo-text {}
+   &__logo-text {
+         font-weight: 600;
+   }
 
    // .footer__info
 
    &__info {
       align-items:center;
       display: flex;
-      gap:20px 40px;
+      gap:15px 30px;
       flex-wrap: wrap;
       justify-content: center;
    }

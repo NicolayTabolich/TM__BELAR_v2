@@ -301,8 +301,11 @@ body {
 
 
 .navigaishon {
-   padding: 10px 0px;
+   padding: 90px 0px 10px 0px;
    // .navigaishon__container
+   @media (max-width: 767.98px) {
+      padding: 60px 0px 10px 0px;
+   }
 
    &__container {}
 
@@ -358,27 +361,53 @@ body {
 
    &__body {}
 
+
+   &__title{
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 30px;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: 1px;
+      @media (max-width: 767.98px) {
+         margin-bottom: 20px;
+         font-size: 24px;
+      }
+   }
    // .staff__items
 
    &__items {
       display: flex;
       margin: 0px -15px;
       flex-wrap: wrap;
-      row-gap: 20px;
+      row-gap: 30px;
+      @media (max-width: 991.98px) {
+         justify-content: center;
+      }
+      @media (max-width: 767.98px) {
+         row-gap: 20px;
+      }
    }
 
    // .staff__item
 
    &__item {
-      flex: 1 1 auto;
+      flex: 0 1 33.333%;
       display: flex;
       padding: 0px 15px;
-      
+      min-width: 300px;
+      @media (max-width: 991.98px) {
+         flex: 0 1 50%;
+      }
+      @media (max-width: 400px) {
+         flex: 1 1 100%;
+      }
    }
 }
 
 .item-staff {
-      flex: 1 1 auto;
+      height: 100%;
+      width: 100%;
       background: #FFF;
       box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.28);
       padding: 10px 15px;
@@ -398,6 +427,8 @@ body {
          border: 1px solid rgba(0, 0, 0, .2);
          border-radius: 50%;
          padding: 15px;
+         object-fit: cover;
+         object-position: center;
       }
    }
 
@@ -408,12 +439,20 @@ body {
       display: flex;
       flex-direction: column;
       row-gap: 10px;
-      align-items:center
+      align-items:center;
+      @media (max-width: 767.98px) {
+         // padding: 8px 10px;
+         font-size: 14px;
+      }
    }
 
    // .item-staff__name
 
-   &__name {}
+   &__name {
+      text-align: center;
+      font-weight: 600;
+      line-height: 120%;
+   }
 
    // .item-staff__profil
 
@@ -422,14 +461,46 @@ body {
    // .item-staff__links
 
    &__links {
+      flex: 1 1 auto;
       display:flex;
       flex-direction: column;
       align-items:center;
       row-gap: 10px;
       padding: 10px 0px;
+      & span {
+         position: relative;
+         &:nth-child(1)::before {
+            content: url('../icons/phone.svg');
+            position: relative;
+            background-position: center;
+            bottom: 0px;
+            right: 6px;
+            vertical-align: middle;
+            // border: 1px solid #000;
+            height: 100%;
+         }
+         &:nth-child(2)::before {
+            content: url('../icons/email.svg');
+            position: relative;
+            background-position: center;
+            bottom: 0px;
+            right: 6px;
+            vertical-align: middle;
+            // border: 1px solid #000;
+         }
+         }
       & a {
          color: #000;
+         font-weight: 600;
          font-style: italic;
+         @media (max-width: 767.98px) {
+            font-size: 14px;
+         }
+         @media (any-hover: hover) {
+            &:hover {
+               text-decoration: underline;
+            }
+         }
       }
    }
 
@@ -441,3 +512,161 @@ body {
 
    &__mail {}
 }
+
+.info {
+   padding: 10px 0px;
+   // .info__container
+   @media (max-width: 767.98px) {
+      padding: 5px 0px;
+      }
+   &__container {}
+
+   // .info__body
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+   }
+
+   // .info__links
+
+   &__links {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 10px 0px;
+      margin: 0px 0px 10px 0px;
+      @media (max-width: 767.98px) {
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center; 
+         }
+   }
+
+   // .info__link
+
+   &__link {
+      color: #000;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: underline;
+      &.-active{
+         color: var(--color_orng);
+         font-weight: 700;
+      }
+      @media (max-width: 767.98px) {
+         font-size: 16px;
+      }
+   }
+
+   // .info__company
+
+   &__company {}
+
+   // .info__h2
+
+   &__h2 {
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 129%;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      @media (max-width: 767.98px) {
+            font-size: 20px;
+            margin-bottom: 5px;
+      }
+   }
+}
+
+.about__the__company {
+   display: flex;
+   width: 100%;
+   gap: 20px;
+   justify-content: space-between;
+   padding: 20px 0px;
+   @media (max-width: 767.98px) {
+      flex-wrap: wrap;
+      gap: 30px;
+   }
+}
+
+.about__the__text {
+   flex: 0 1 40%;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   flex: 1 1 auto;
+   @media (max-width: 767.98px) {
+         flex: 1 1 auto;
+   }
+}
+
+.about__the__text-item {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   border-bottom: 1px solid #000;
+}
+
+.about__the__text-title {
+      color: #FC8700;
+      font-weight: 600;
+}
+
+.about__the__text-link {
+   padding-left: 3px;
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+   & a{
+      color: #000;
+      font-weight: 600;
+      font-style: italic;
+   
+      @media (max-width: 767.98px) {
+         font-size: 14px;
+      }
+   
+      @media (any-hover: hover) {
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+.about__the__text-link-gps::before{
+   content: url(../icons/gps.svg);
+   right: 3px;
+   vertical-align: middle;
+   position: relative;
+}
+
+.about__the__text-link-tel::before{
+   content: url(../icons/phone.svg);
+   right: 3px;
+   vertical-align: middle;
+   position: relative;
+}
+
+.about__the__text-link-mail::before {
+   content: url(../icons/email.svg);
+      right: 3px;
+      vertical-align: middle;
+      position: relative;
+}
+
+
+.about__the__company__map {
+   flex: 0 1 60%;
+   flex: 1 1 auto;
+   @media (max-width: 767.98px) {
+         flex: 1 1 100%;
+         min-height: 250px;
+   }
+}
+
