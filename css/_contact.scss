@@ -1,41 +1,4 @@
 
-
-:root {
-   --color_orng: #FC9F33;
-   --color_gray: #737373;
-}
-
-main {
-   flex-grow: 1;
-}
-
-[class*="__container"] {
-   max-width: 1140px;
-   margin: 0px auto;
-   padding: 0px 15px;
-}
-
-/* №1 */
-@media (max-width: 1140px) {
-   [class*="__container"] {
-      max-width: 970px;
-   }
-}
-
-/* №2 */
-@media (max-width: 991.98px) {
-   [class*="__container"] {
-      max-width: 750px;
-   }
-}
-
-/* №3 */
-@media (max-width: 767.98px) {
-   [class*="__container"] {
-      max-width: none;
-   }
-}
-
 @media (max-width: 1140px) {}
 
 /* Условные планшеты */
